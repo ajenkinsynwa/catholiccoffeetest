@@ -4,7 +4,7 @@ import iconsearch from './assets/icon-search.svg';
 import iconcircle from './assets/icon-circle.svg';
 import iconcart from './assets/icon-cart.svg';
 import { useState } from "react";
-import { FaBars, FaTimes} from "react-icons/fa";
+import { FaBars, FaTimes,} from "react-icons/fa";
 
 const Navbar = () => {
   const [click, setClick] = useState(false);
@@ -29,6 +29,7 @@ const Navbar = () => {
           <img src={iconsearch} alt="download" className="icons1" />
           <img src={iconcircle} alt="download" className="icons2" />
           <img src={iconcart} alt="download" className="icons3" />
+        
           <nav className="menu-toggle" onClick={handleClick}>
               {/* Hamburger icon */}
               <div className="hamburger">
