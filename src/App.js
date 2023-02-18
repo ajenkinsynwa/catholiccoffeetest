@@ -1,5 +1,6 @@
 import './App.css';
 import logo from './assets/logo.svg';
+import logoHoriz from './assets/logo-horiz.svg';
 import iconsearch from './assets/icon-search.svg';
 import iconcircle from './assets/icon-circle.svg';
 import iconcart from './assets/icon-cart.svg';
@@ -25,18 +26,21 @@ const Navbar = () => {
     <div className={color ? "header scrolled" : "header"}>
       <div className="banner1">
         <div>
-          <img src={logo} alt="download" className="logo" />
-          <img src={iconsearch} alt="download" className="icons1" />
-          <img src={iconcircle} alt="download" className="icons2" />
-          <img src={iconcart} alt="download" className="icons3" />
+          <img src={logo} alt="logo" className="logo" />
+          <img src={logoHoriz} alt="logo" className="logo-mobile" />
+          <div className="nav-container">
+            <img src={iconsearch} alt="download" className="nav-icon" />
+            <img src={iconcircle} alt="download" className="nav-icon" />
+            <img src={iconcart} alt="download" className="nav-icon nav-icon-cart" />
+          </div>
         
           <nav className="menu-toggle" onClick={handleClick}>
               {/* Hamburger icon */}
               <div className="hamburger">
                 {click ? (
-                  <FaTimes size={20} style={{ color: "brown" }} />
+                  <FaTimes size={20} style={{ color: "#E9DDC7" }} />
                 ) : (
-                  <FaBars size={20} style={{ color: "brown" }} />
+                  <FaBars size={20} style={{ color: "#E9DDC7" }} />
                 )}
               </div>
          
@@ -59,6 +63,11 @@ const Navbar = () => {
                 </li>
                 <li>
                   <a href="/" onClick={handleClick}>
+                    THE SAINTS
+                  </a>
+                </li>
+                <li>
+                  <a href="/" onClick={handleClick}>
                     SUBSCRIPTIONS
                   </a>
                 </li>
@@ -67,8 +76,42 @@ const Navbar = () => {
           </nav>
         </div>
       </div>
+      <nav className={click ? "mobile-nav active" : "mobile-nav"}>
+        <div>
+          <ul>
+            <li>
+              <a className='' href="/" onClick={handleClick}>
+                OUR COFFEES
+              </a>
+            </li>
+            <li>
+              <a href="/" onClick={handleClick}>
+                GIFT SETS
+              </a>
+            </li>
+            <li>
+              <a href="/" onClick={handleClick}>
+                MERCHANDISE
+              </a>
+            </li>
+            <li>
+              <a href="/" onClick={handleClick}>
+                THE SAINTS
+              </a>
+            </li>
+            <li>
+              <a href="/" onClick={handleClick}>
+                SUBSCRIPTIONS
+              </a>
+            </li>
+          </ul>
+        </div>
+      </nav>
       <div className='purple-bar'>
-        <h2 className='text-purle-bar'>FREE SHIPPING ON ORDERS OVER $50</h2>
+        <h3 className='text-purle-bar'>FREE SHIPPING ON ORDERS OVER $50</h3>
+      </div>
+      <div className='our-coffee-box'>
+        <h4 className='our-coffee-text'>OUR COFFEE</h4>
       </div>
       <div
         className={click ? "overlay active" : "overlay"}
