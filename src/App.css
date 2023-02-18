@@ -104,9 +104,11 @@ nav a {
 }
 
 .purple-bar {
-  background:#ACA9CA;
-  margin: -13px;
-  height: 28px;
+  background: #ACA9CA;
+  margin: -21px;
+  margin-bottom: -21px;
+  height: 52px;
+  padding: 15px;
 }
 
 .text-purle-bar {
@@ -122,9 +124,19 @@ nav a {
 }
 
 .our-coffee-box {
-  background:#D6D5DE;
-  margin: -13px;
-  height: 28px;
+  background: #D6D5DE;
+  margin: 0px;
+  height: 105px;
+  padding: 30px;
+  width: 100%;
+}
+
+.our-coffee-text {
+  font-size: 44px;
+    font-family: Raleway;
+    display: block;
+    padding: 3px;
+    width: 100%;
 }
 
 /* Media query for mobile devices */

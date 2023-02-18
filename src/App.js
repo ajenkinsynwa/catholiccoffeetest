@@ -111,7 +111,7 @@ const Navbar = () => {
         <h3 className='text-purle-bar'>FREE SHIPPING ON ORDERS OVER $50</h3>
       </div>
       <div className='our-coffee-box'>
-        <h4 className='our-coffee-text'>OUR COFFEE</h4>
+        <h1 className='our-coffee-text'>OUR COFFEES</h1>
       </div>
       <div
         className={click ? "overlay active" : "overlay"}
