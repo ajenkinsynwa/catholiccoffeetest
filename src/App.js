@@ -112,6 +112,10 @@ const Navbar = () => {
       </div>
       <div className='our-coffee-box'>
         <h1 className='our-coffee-text'>OUR COFFEES</h1>
+        <p className='our-coffee-paragraph'> Be inspired by the lives of the saints and energized by our coffee. We combine each of our
+          delicious coffees with an extraordinary saint, making every roast a speical treat for any
+          Catholic who loves quality coffee. 
+        </p>
       </div>
       <div
         className={click ? "overlay active" : "overlay"}

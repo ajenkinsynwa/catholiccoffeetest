@@ -124,6 +124,7 @@ nav a {
 }
 
 .our-coffee-box {
+  display: block;
   background: #D6D5DE;
   margin: 0px;
   height: 105px;
@@ -132,11 +133,16 @@ nav a {
 }
 
 .our-coffee-text {
-  font-size: 44px;
-    font-family: Raleway;
-    display: block;
-    padding: 3px;
-    width: 100%;
+  display: inline-block;
+  width: 60%;
+  font-size: 40px;
+  margin-right: 20px;
+}
+
+.our-coffee-paragraph {
+  display: inline-block;
+  margin: 0;
+  padding: 10;
 }
 
 /* Media query for mobile devices */
@@ -239,5 +245,13 @@ nav a {
     height: 100%;
     background-color: rgba(0, 0, 0, 0.5);
   }
-  
+
+  .our-coffee-text, .our-coffee-paragraph {
+    display: block;
+    width: 100%;
+  }
+
+  .our-coffee-box {
+    height: 190px;
+  }
 }
