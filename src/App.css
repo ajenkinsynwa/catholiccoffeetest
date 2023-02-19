@@ -1,6 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,700;1,800;1,900&family=Roboto&display=swap');
+
 body {
   margin: 0;
   padding: 0;
+  width: 100%;
 }
 
 .logo {
@@ -105,11 +108,11 @@ nav a {
 
 .purple-bar {
   background: #ACA9CA;
-  margin: -21px;
   margin-bottom: -21px;
   height: 52px;
   padding: 15px;
 }
+
 
 .text-purle-bar {
   text-align: center;
@@ -123,27 +126,109 @@ nav a {
   display: none;
 }
 
+
 .our-coffee-box {
-  display: block;
-  background: #D6D5DE;
-  margin: 0px;
-  height: 105px;
-  padding: 30px;
-  width: 100%;
-}
+  display: flex;
+  background: #e0dfe8;
+  height: 139px;
+  align-items: center;
+
+ 
+};
+   
 
 .our-coffee-text {
-  display: inline-block;
-  width: 60%;
-  font-size: 40px;
-  margin-right: 20px;
-}
+  display: block;
+  width: 78%;
+  margin: 0px;
+  padding-left: 48px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 50px;
+  }
 
 .our-coffee-paragraph {
-  display: inline-block;
-  margin: 0;
-  padding: 10;
+  width: 86%;
+  padding-right: 130px;
+  font-family: Raleway;
 }
+
+.button1, .button2 {
+  background-color: #e8d1a6;
+    border: none;
+    color: #0f172a;
+    padding: 12px;
+    text-align: left;
+    font-family: Raleway;
+    display: inline-block;
+    font-size: 20px;
+    margin: 4px 2px;
+    cursor: pointer;
+    width: 250px;
+    border-radius: 43px;
+    margin-right: 34px;
+}
+
+
+.button3 {
+  background-color: #e8d1a6;
+  border: none;
+  color: #0f172a;
+  padding: 13px;
+  text-align: left;
+  font-family: Raleway;
+  display: inline-block;
+  font-size: 20px;
+  margin: 4px 2px;
+  cursor: pointer;
+  width: 145px;
+  border-radius: 43px;
+}
+
+/*Buy Now Button On Coffees*/
+.button4 {
+  background-color: #aca6e8;
+  border: none;
+  color: #0f172a;
+  padding: 13px;
+  text-align: center;
+  font-family: Raleway;
+  display: inline-block;
+  font-size: 20px;
+  margin: 4px 2px;
+  cursor: pointer;
+  width: 145px;
+  border-radius: 43px;
+}
+
+.button1-move {
+  display: flex;
+  padding: 1px;
+  flex-direction: row;
+  margin: 32px;
+
+}
+
+.button3-move {
+  padding: 1px;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-start;
+    margin-top: -91px;
+    margin-right: 72px;
+}
+
+.products-container {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.coffee-product {
+  font-family: Raleway;
+  text-align: center;
+}
+
 
 /* Media query for mobile devices */
 @media screen and (max-width: 1040px) {
@@ -246,12 +331,24 @@ nav a {
     background-color: rgba(0, 0, 0, 0.5);
   }
 
-  .our-coffee-text, .our-coffee-paragraph {
-    display: block;
-    width: 100%;
+  .our-coffee-text {
+    display: flex;
+    padding: 9px;
+    height: 11;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+
+  .our-coffee-paragraph {
+    display: flex;
+    padding: 9px;
+    height: 11;
   }
 
   .our-coffee-box {
-    height: 190px;
+    height: 164px;
+    display: flex;
+    flex-wrap: nowrap;
+    font-size: 11px;
   }
 }
