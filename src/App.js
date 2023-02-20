@@ -1,21 +1,12 @@
 import './App.css';
 // import { Link } from "react-router-dom";
 import logo from './assets/logo.svg';
-import stars from './assets/stars.png';
 import logoHoriz from './assets/logo-horiz.svg';
 import iconsearch from './assets/icon-search.svg';
 import iconcircle from './assets/icon-circle.svg';
 import iconcart from './assets/icon-cart.svg';
-import coffee1 from './assets/coffee1.png';
-import coffee2 from './assets/coffee2.png';
-import coffee3 from './assets/coffee3.png';
-import coffee4 from './assets/coffee4.png';
-import coffee5 from './assets/coffee5.png';
-import coffee6 from './assets/coffee6.png';
-import coffee7 from './assets/coffee7.png';
-import coffee8 from './assets/coffee8.png';
-import coffee9 from './assets/coffee9.png';
-import coffee10 from './assets/coffee10.png';
+import CoffeeProduct from './components/CoffeeProduct';
+import coffeeData from './data/coffee.json';
 import { useState } from "react";
 import { FaBars, FaTimes,} from "react-icons/fa";
 
@@ -132,174 +123,67 @@ const Navbar = () => {
         </p>
       </div>
       <div className='button1-move'>
-      <button class="button1">Sort By: Featured</button>
-      <button class="button2">Sort By: Featured</button>
+        <button class="button1">Sort By: Featured</button>
+        <button class="button2">Sort By: Featured</button>
+        <button class="button3">View: 12</button>
       </div>
-      <div className='button3-move'>
-      
-      <button class="button3">View: 12</button>
-      </div>
-                  
       <div className='products-container'>
-
-        <div className='coffee-product'>
-         <img src={coffee1} alt="coffee1"/> 
-         <h3> Our Lady of Guadalupe Mexican Mocha </h3>
-         <p1> Medium Roast</p1>
-         <h2> $14.95 </h2>
-         <img src={stars} alt="stars"/>
-         <button class="button4 modalBtn">BUY NOW</button>
-         </div>
-
-         <div className='coffee-product'>
-         <img src={coffee2} alt="coffee2"/> 
-         <h3> St. Padre Pio Espresso Roast </h3>
-         <p1> Medium/Dark Roast</p1>
-         <h2> $14.95 </h2>
-         <img src={stars} alt="stars" className="stars" />
-         <button class="button4">BUY NOW</button>
-         </div>   
-
-        <div className='coffee-product'> 
-         <img src={coffee3} alt="coffe3" /> 
-         <h3> St. Therese of Lisieux Light Roast</h3>
-         <p1> Light Roast</p1>
-         <h2> $14.95 </h2>
-         <img src={stars} alt="stars" className="stars" />
-         <button class="button4">BUY NOW</button>
-         </div> 
-</div>
-
-<div className='products-container'>
-
-          <div className='coffee-product'>
-         <img src={coffee4} alt="coffee4"/> 
-         <h3> St. Patrick Irish Cream </h3>
-         <p1> Irish Cream Flavor</p1>
-         <h2> $14.95 </h2>
-         <img src={stars} alt="stars"/>
-         <button class="button4">BUY NOW</button>
-         </div>
-
-         <div className='coffee-product'>
-         <img src={coffee5} alt="coffee5"/> 
-         <h3> St. Valentine Raspberry White Mocha </h3>
-         <p1> Medium Roast</p1>
-         <h2> $14.95 </h2>
-         <img src={stars} alt="stars" className="stars" />
-         <button class="button4">BUY NOW</button>
-         </div>   
-
-        <div className='coffee-product'> 
-         <img src={coffee6} alt="coffe6" /> 
-         <h3> St. Peter Parish Roast</h3>
-         <p1> Medium Roast</p1>
-         <h2> $14.95 </h2>
-         <img src={stars} alt="stars" className="stars" />
-         <button class="button4">BUY NOW</button>
-         </div> 
-</div>
-
-<div className='products-container'>
-          <div className='coffee-product'>
-         <img src={coffee7} alt="coffee7"/> 
-         <h3> St. Nicholas Christmas Blend</h3>
-         <p1> Medium Roast</p1>
-         <h2> $14.95 </h2>
-         <img src={stars} alt="stars"/>
-         <button class="button4">BUY NOW</button>
-         </div>
-
-         <div className='coffee-product'>
-         <img src={coffee8} alt="coffee8"/> 
-         <h3>St. Michael Dark Roast</h3>
-         <p1> Dark Roast </p1>
-         <h2> $14.95 </h2>
-         <img src={stars} alt="stars" className="stars" />
-         <button class="button4">BUY NOW</button>
-         </div>   
-
-        <div className='coffee-product'> 
-         <img src={coffee9} alt="coffee9" /> 
-         <h3> Sleeping St. Joseph Decaf</h3>
-         <p1> Decaf Dark Roast </p1>
-         <h2> $14.95 </h2>
-         <img src={stars} alt="stars" className="stars" />
-         <button class="button4">BUY NOW</button>
-         </div>  
-    </div>  
-
-    <div className='products-container1'>            
-           <div className='coffee-product'> 
-         <img src={coffee10} alt="coffee10" /> 
-         <h3> St. Joan of Arc French Blend</h3>
-         <p1> Dark Roast</p1>
-         <h2> $14.95 </h2>
-         <img src={stars} alt="stars" className="stars" />
-         <button className='button4 modalBtn'>BUY NOW</button>
-
-        
+        {coffeeData.map((coffee, index) => {
+          return <CoffeeProduct coffee={coffee} key={index} />
+        })}
       </div>
-      <div id="simpleModal" className='modal'>
-        <div className='modal-content'>
-          <span className='closeBtn'>&times;</span>
-          <p>Hello...I am a modal</p>
 
-          </div>  
-          </div>
-      </div>
-    {/* <div
+    <div
         className={click ? "overlay active" : "overlay"}
         onClick={handleClick}
-      ></div> */}
+      ></div>
 
       
-       <footer className="footer-banner">
-       <div className='footer-links'>
-        
-              <ul className='footer-links'>
-                <li>
-                  <a className='footer-links' href="/" onClick={handleClick}>
-                  OUR COFFEES
-                  </a>
-                </li>
-                <li>
-                  <a className='footer-links' href="/" onClick={handleClick}>
-                    GIFT SETS
-                  </a>
-                </li>
-                <li>
-                  <a className='footer-links' href="/" onClick={handleClick}>
-                    MERCHANDISE
-                  </a>
-                </li>
-                <li>
-                  <a className='footer-links' href="/" onClick={handleClick}>
-                    THE SAINTS
-                  </a>
-                </li>
-                <li>
-                  <a className='footer-links' href="/" onClick={handleClick}>
-                    SUBSCRIPTIONS
-                  </a>
-                </li>
-              </ul>
-            </div>
-          
-          <div className="">
-                <h1 className="newsletter-text"> JOIN OUR NEWSLETTER </h1>
-                <p1 className="newsletter-text2">Get Exclusive offers and stay up to day on new roasts and products.</p1>
-               
-          </div>
+    <footer className="footer-banner">
+      <div className='footer-links'>
+        <ul className='footer-links'>
+        <li>
+          <a className='footer-links' href="/" onClick={handleClick}>
+          OUR COFFEES
+          </a>
+        </li>
+        <li>
+          <a className='footer-links' href="/" onClick={handleClick}>
+            GIFT SETS
+          </a>
+        </li>
+        <li>
+          <a className='footer-links' href="/" onClick={handleClick}>
+            MERCHANDISE
+          </a>
+        </li>
+        <li>
+          <a className='footer-links' href="/" onClick={handleClick}>
+            THE SAINTS
+          </a>
+        </li>
+        <li>
+          <a className='footer-links' href="/" onClick={handleClick}>
+            SUBSCRIPTIONS
+          </a>
+        </li>
+        </ul>
+      </div>
 
-          <form class="button-newsletter">
+      <div>
+        <div className="">
+          <h1 className="newsletter-text"> JOIN OUR NEWSLETTER </h1>
+          <p1 className="newsletter-text2">Get Exclusive offers and stay up to day on new roasts and products.</p1>
+        </div>
+
+        <form class="button-newsletter">
+          <input type="text" placeholder="your@email.com" />
           <button class="button-newsletterJoin">Join</button>
-          <label for="email" name="email" className="" placeholder="your@email.com"></label>
-          </form>
+        </form>
 
-           <h3 className='follow-catholic'>Follow Catholic Coffee</h3> 
-
-         </footer>  
+        <h3 className='follow-catholic'>Follow Catholic Coffee</h3> 
+      </div>    
+    </footer>  
     </div>
  
 

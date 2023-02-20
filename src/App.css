@@ -32,6 +32,7 @@ nav {
   justify-content: center; /* Center navigation links horizontally */
   width: 80%;
   margin: 0 auto; /* Center navigation links horizontally */
+
 }
 
 nav ul {
@@ -46,6 +47,7 @@ nav a {
   text-decoration: none;
   color: bisque;
   justify-content: center; /* Center navigation link text vertically */
+  display: none;
 }
 
 nav ul {
@@ -132,8 +134,7 @@ nav a {
   background: #e0dfe8;
   height: 139px;
   align-items: center;
-
- 
+  padding: 0 32px;
 };
    
 
@@ -144,11 +145,11 @@ nav a {
   padding-left: 48px;
   font-family: 'Poppins', sans-serif;
   font-size: 50px;
-  }
+}
 
 .our-coffee-paragraph {
-  width: 86%;
-  padding-right: 130px;
+  max-width: 800px;
+  padding-left: 50px;
   font-family: Raleway;
 }
 
@@ -178,7 +179,7 @@ nav a {
   font-family: Raleway;
   display: inline-block;
   font-size: 20px;
-  margin: 4px 2px;
+  margin-left: auto;
   cursor: pointer;
   width: 145px;
   border-radius: 43px;
@@ -230,6 +231,12 @@ nav a {
   text-align: center;
 }
 
+.coffee-product-inner-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .modal {
   display:none;
   position: fixed;
@@ -269,6 +276,9 @@ nav a {
   overflow: auto;
   padding-bottom: 10px;
   position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .footer-links {
@@ -358,6 +368,18 @@ nav a {
     
   }
 
+  /* Displays the navigation when clicked */
+  nav a {
+    display: flex;
+    width: 100%;
+    padding: 60px 0 20px;
+    text-align: center;
+    text-decoration: none;
+    color: bisque;
+    justify-content: center; /* Center navigation link text vertically */
+   
+  }
+
   .nav-icon-cart {
     display: block;
     float: right;
@@ -441,19 +463,21 @@ nav a {
     height: 11;
     justify-content: space-evenly;
     align-items: center;
+    margin-bottom: 0;
   }
 
   .our-coffee-paragraph {
     display: flex;
     padding: 9px;
     height: 11;
+    margin: 0;
   }
 
   .our-coffee-box {
     height: 164px;
     display: flex;
     flex-wrap: nowrap;
-    font-size: 11px;
+    flex-direction: column;
   }
 
   .button3 {
