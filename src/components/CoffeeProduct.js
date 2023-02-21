@@ -8,7 +8,7 @@ function CoffeeProduct({coffee}) {
 
 	return (
 		<div className='coffee-product'>
-			<img src={require('../assets/coffee1.png')} alt="coffee1"/> 
+			<img src={require(`../assets/${coffee.imagePath}`)} alt={coffee.name} />
 			<h3>{coffee?.name}</h3>
 			<p>{coffee?.type}</p>
 			<h2>{coffee?.price}</h2>

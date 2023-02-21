@@ -5,10 +5,12 @@ import logoHoriz from './assets/logo-horiz.svg';
 import iconsearch from './assets/icon-search.svg';
 import iconcircle from './assets/icon-circle.svg';
 import iconcart from './assets/icon-cart.svg';
+import iconsfbim from './assets/iconsfbim.svg';
 import CoffeeProduct from './components/CoffeeProduct';
 import coffeeData from './data/coffee.json';
 import { useState } from "react";
 import { FaBars, FaTimes,} from "react-icons/fa";
+
 
 const Navbar = () => {
   const [click, setClick] = useState(false);
@@ -25,19 +27,17 @@ const Navbar = () => {
 
   window.addEventListener("scroll", changeColor);
 
-  
-
-  return (
-    <div className={color ? "header scrolled" : "header"}>
+return (
+  <div className={color ? "header scrolled" : "header"}>
       <div className="banner1">
-        <div>
+    <div>
           <img src={logo} alt="logo" className="logo" />
           <img src={logoHoriz} alt="logo" className="logo-mobile" />
-          <div className="nav-container">
+    <div className="nav-container">
             <img src={iconsearch} alt="download" className="nav-icon" />
             <img src={iconcircle} alt="download" className="nav-icon" />
             <img src={iconcart} alt="download" className="nav-icon nav-icon-cart" />
-          </div>
+    </div>
         
           <nav className="menu-toggle" onClick={handleClick}>
               {/* Hamburger icon */}
@@ -47,12 +47,12 @@ const Navbar = () => {
                 ) : (
                   <FaBars size={20} style={{ color: "#E9DDC7" }} />
                 )}
-              </div>
+            </div>
          
-            <div>
+            <div className='nav-main'>
               <ul className={click ? "menu-container active" : "menu-container"}>
                 <li>
-                  <a className='' href="/" onClick={handleClick}>
+                  <a href="/" onClick={handleClick}>
                     OUR COFFEES
                   </a>
                 </li>
@@ -81,11 +81,12 @@ const Navbar = () => {
           </nav>
         </div>
       </div>
-      <nav>
+      
+      <nav className={click ? "mobile-nav active" : "mobile-nav"}>
         <div>
-          <ul className={click ? "menu-container active" : "menu-container"}>
-            <li className='hamburger-text'>
-              <a href="/" onClick={handleClick}>
+          <ul>
+            <li>
+              <a className='' href="/" onClick={handleClick}>
                 OUR COFFEES
               </a>
             </li>
@@ -112,6 +113,7 @@ const Navbar = () => {
           </ul>
         </div>
       </nav>
+      
       <div className='purple-bar'>
         <h3 className='text-purle-bar'>FREE SHIPPING ON ORDERS OVER $50</h3>
       </div>
@@ -123,16 +125,17 @@ const Navbar = () => {
         </p>
       </div>
       <div className='button1-move'>
-        <button class="button1">Sort By: Featured</button>
+        <button class="button1">Sort By: Featured </button>
         <button class="button2">Sort By: Featured</button>
         <button class="button3">View: 12</button>
       </div>
+
       <div className='products-container'>
         {coffeeData.map((coffee, index) => {
           return <CoffeeProduct coffee={coffee} key={index} />
         })}
       </div>
-
+     
     <div
         className={click ? "overlay active" : "overlay"}
         onClick={handleClick}
@@ -177,11 +180,14 @@ const Navbar = () => {
         </div>
 
         <form class="button-newsletter">
-          <input type="text" placeholder="your@email.com" />
+          <input class="inputfield"type="text" placeholder="your@email.com" />
           <button class="button-newsletterJoin">Join</button>
         </form>
 
         <h3 className='follow-catholic'>Follow Catholic Coffee</h3> 
+
+        <img src={iconsfbim} alt="download" className="social-media-icons" />
+
       </div>    
     </footer>  
     </div>

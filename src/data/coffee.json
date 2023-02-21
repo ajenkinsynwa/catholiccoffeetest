@@ -3,61 +3,61 @@
 		"name": "Our Lady of Guadalupe Mexican Mocha",
 		"type": "Medium Roast",
 		"price": "$14.95",
-		"imagePath": "coffee1"
+		"imagePath": "coffee1.png"
 	},
 	{
 		"name": "St. Padre Pio Espresso Roast",
 		"type": "Medium/Dark Roast",
 		"price": "$14.95",
-		"imagePath": "coffee2"
+		"imagePath": "coffee2.png"
 	},
 	{
 		"name": "St. Therese of Lisieux Light Roast",
 		"type": "Light Roast",
 		"price": "$14.95",
-		"imagePath": "coffee3"
+		"imagePath": "coffee3.png"
 	},
 	{
 		"name": "St. Patrick Irish Cream",
 		"type": "Irish Creme Flavor",
 		"price": "$14.95",
-		"imagePath": "coffee4"
+		"imagePath": "coffee4.png"
 	},
 	{
 		"name": "St. Nicholas Christmas Blend",
 		"type": "Medium Roast",
 		"price": "$14.95",
-		"imagePath": "coffee5"
+		"imagePath": "coffee5.png"
 	},
 	{
 		"name": "St. Michael Dark Roast",
 		"type": "Dark Roast",
 		"price": "$14.95",
-		"imagePath": "coffee6"
+		"imagePath": "coffee6.png"
 	},
 	{
 		"name": "St. Nicholas Christmas Blend",
 		"type": "Medium Roast",
 		"price": "$14.95",
-		"imagePath": "coffee7"
+		"imagePath": "coffee7.png"
 	},
 	{
 		"name": "St. Michael Dark Roast",
 		"type": "Dark Roast",
 		"price": "$14.95",
-		"imagePath": "coffee8"
+		"imagePath": "coffee8.png"
 	},
 {
 		"name": "Sleeping St. Joseph Decaf",
 		"type": "Decaf Dark Roast",
 		"price": "$14.95",
-		"imagePath": "coffee9"
+		"imagePath": "coffee9.png"
 },
 {
 	"name": "St. Joan of Arc French Blend",
 		"type": "Dark Roast",
 		"price": "$14.95",
-		"imagePath": "coffee10"
+		"imagePath": "coffee10.png"
 }
 
 ]

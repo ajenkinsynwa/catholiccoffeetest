@@ -1,29 +1,31 @@
-import React from 'react'
-import "./Model.css";
-import coffee from "../data/coffee.json"
-// import CoffeeProduct from '../components/CoffeeProduct';
 
-function Modal({closeModal}) {
+import "./Modal.css";
+// import coffee from "../data/coffee.json"
+
+function Modal({closeModal, coffee}) {
   return (
     //closemodal will close the modal
     <div className='modal-background'>
     <div className='modal-container'>
+    <div className='modal-container1'>
     <div className='titleClosedBtn'>
-      <button onClick={() => {
+      <button className="titleClosedBtn" onClick={() => {
       closeModal(false); }}>X
        </button>
     </div>
-    <img className='coffe-modal-image' src={require('../assets/coffee1.png')} alt="coffee1"/> 
-    <div className='title'>
-    <h3>{coffee?.name}</h3>
+    <div className='title-header'>
+      
+      <h1>{coffee?.name}Our Lady of Guadalupe Mexican Mocha</h1>
+      <p2>Medium Roast {coffee?.type}</p2>
+      <br></br>
+      <p2>Grind:Whole Bean</p2>
+    </div>
+     <div>
+    <img className='coffee-modal-image' src={require('../assets/coffee1.png')} alt="coffee1"/> 
     </div>
 
-    <div className='body'>
-   
-      <p> {coffee?.type}</p>
-      <p>Grind: Whole Bean</p>
-    </div>    
-
+      
+    <div>
       <button className='continue-button' onClick={() => {closeModal(false);
         }}>Contiune Shopping </button>
       <button className='view-button'> View/Edit Cart </button>
@@ -31,6 +33,9 @@ function Modal({closeModal}) {
       <h2>$14.95</h2>
       <p>Your Cart Contains 1 items</p>
       <button className='checkout-button'>Proceed To Checkout</button>
+
+      </div>
+      </div>
     </div>
     </div>
   );
