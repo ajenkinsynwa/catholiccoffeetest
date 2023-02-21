@@ -3,9 +3,10 @@
 body {
   margin: 0;
   padding: 0;
- 
+  
 }
 
+ /* Catholic Coffee Logo */
 .logo {
   display: flex;
   margin: 0 auto;
@@ -13,10 +14,12 @@ body {
   padding-top: 30px;
 }
 
+/* Catholic Coffee Logo When Transition to Mobile */
 .logo-mobile {
   display: none;
 }
 
+/* Black Banner */
 .banner1 {
   background-color: black;
   width: 100%;
@@ -26,13 +29,14 @@ body {
   position: relative;
 }
 
+/* Nav Bar */
 nav {
   display: flex;
   align-items: center;
   justify-content: center; /* Center navigation links horizontally */
   width: 80%;
   margin: 0 auto; /* Center navigation links horizontally */
-}
+  }
 
 nav ul {
   padding-left: 0
@@ -47,6 +51,7 @@ nav a {
   color: bisque;
   justify-content: center; /* Center navigation link text vertically */
 }
+
 
 nav ul {
   display: flex;
@@ -109,7 +114,9 @@ nav a {
   display: none;
   z-index: 1;
 }
+/* All of these above are for the Nav bar styling and transition  when shrinking to mobile*/
 
+/*Purple bar under the Nav bar */
 .purple-bar {
   background: #ACA9CA;
   margin-bottom: -21px;
@@ -118,7 +125,7 @@ nav a {
 
 }
 
-
+/* Text in the Purple bar */
 .text-purle-bar {
   text-align: center;
   font-size: 14px;
@@ -127,6 +134,7 @@ nav a {
   color: #e9ddc7;
 }
 
+/*Our coffee box styles */
 .our-coffee-box {
   display: flex;
   background: #e0dfe8;
@@ -135,7 +143,7 @@ nav a {
   padding: 0 32px;
 };
    
-
+/*our coffee text inside*/
 .our-coffee-text {
   display: block;
   width: 78%;
@@ -145,12 +153,14 @@ nav a {
   font-size: 50px;
 }
 
+/*Our Coffee Paragraph */
 .our-coffee-paragraph {
   max-width: 800px;
   padding-left: 50px;
   font-family: Raleway;
 }
 
+/*Buttons Featured and select subcategory*/
 .button1, .button2 {
   background-color: #e8d1a6;
     border: none;
@@ -159,12 +169,17 @@ nav a {
     text-align: left;
     font-family: Raleway;
     display: inline-block;
-    font-size: 20px;
+    font-size: 17px;
     margin: 4px 2px;
     cursor: pointer;
     width: 250px;
     border-radius: 43px;
     margin-right: 34px;
+    background-image: url('assets/downarrow.svg');
+  background-repeat: no-repeat;
+  background-position: right center;
+  background-origin: content-box;
+  padding-left: 20px;
 }
 
 
@@ -180,6 +195,10 @@ nav a {
   margin-left: auto;
   cursor: pointer;
   width: 145px;
+  background-image: url('assets/downarrow.svg');
+  background-repeat: no-repeat;
+  background-position: right center;
+  background-origin: content-box;
   border-radius: 43px;
 }
 
@@ -199,6 +218,7 @@ nav a {
   border-radius: 43px;
 }
 
+/* This moves the bottons in place*/
 .button1-move {
   display: flex;
   padding: 1px;
@@ -206,7 +226,7 @@ nav a {
   margin: 32px;
 
 }
-
+/* This moves the botton3 in place*/
 .button3-move {
   padding: 1px;
     display: flex;
@@ -216,6 +236,7 @@ nav a {
     margin-right: 72px;
 }
 
+/*Container for Coffee Products*/
 .products-container {
   display: flex;
   align-items: center;
@@ -236,6 +257,7 @@ nav a {
 }
 
 
+/* Styles for the footer*/
 .footer-banner {
   background-color: #22212b;
   /* width: 100%; */
@@ -304,11 +326,13 @@ nav a {
   margin-left: 102px;
 }
 
+
 .newsletter-text2 {
   color: #e8d1a6;
   font-family: 'Raleway';
   font-size: 12px;
 }
+
 
 .follow-catholic {
   color: #e8d1a6;
@@ -368,9 +392,9 @@ nav a {
     text-decoration: none;
     color: rgb(0, 0, 0);
     justify-content: center; /* Center navigation link text vertically */
-    
   }
 
+  /* navigation cart in menu */
   .nav-icon-cart {
     display: block;
     float: right;
@@ -379,6 +403,7 @@ nav a {
     width: 28px;
   }
   
+  /* menu-toggles hamburger menu*/
   .menu-toggle {
     display: flex;
     align-items: center;
@@ -391,6 +416,7 @@ nav a {
 
   }
   
+   /* hamburger design */
   .hamburger {
     display: flex;
     align-items: center;
@@ -408,7 +434,7 @@ nav a {
     display: none;
   }
   
-  .menu-container.active {
+  .menu-container {
     display: block;
     position: absolute;
     top: 70px;
@@ -422,19 +448,21 @@ nav a {
     list-style: none;
     margin: 0;
     padding: 0;
+    width: 100%;
   }
   
   .menu-container li {
     padding: 10px 20px;
   }
   
-  .menu-container a {
+  .menu-container  {
     text-decoration: none;
     color: #333;
-    font-size: 18px;
+    font-size: 12px;
     font-weight: bold;
   }
   
+  /* transitions the nav bar to display*/
   .overlay.active {
     display: block;
     position: fixed;
@@ -442,7 +470,6 @@ nav a {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
   }
 
   .our-coffee-text {
@@ -494,7 +521,6 @@ nav a {
 
 .footer-banner {
   background-color: #22212b;
-  /* width: 100%; */
   height: 50%;
   overflow: auto;
   padding-bottom: 10px;
@@ -504,6 +530,4 @@ nav a {
   align-items: center;
 
 }
-
-
 }

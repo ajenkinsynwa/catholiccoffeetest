@@ -1,7 +1,8 @@
-
 import "./Modal.css";
-// import coffee from "../data/coffee.json"
 
+
+//this is the function that will be called to show the modal\\ 
+//{coffee?.name} ect. is passing in the JSON Data from coffee.json\\
 function Modal({closeModal, coffee}) {
   return (
     //closemodal will close the modal
@@ -15,31 +16,33 @@ function Modal({closeModal, coffee}) {
     </div>
     <div className='title-header'>
       
-      <h1>{coffee?.name}Our Lady of Guadalupe Mexican Mocha</h1>
-      <p2>Medium Roast {coffee?.type}</p2>
+      <h1>{coffee?.name}</h1>
+      <p2>{coffee?.type}</p2>
       <br></br>
-      <p2>Grind:Whole Bean</p2>
+      <p2>Grind: Whole Bean</p2>
     </div>
      <div>
-    <img className='coffee-modal-image' src={require('../assets/coffee1.png')} alt="coffee1"/> 
-    </div>
+    <img className='coffee-modal-image' src={require(`../assets/${coffee.imagePath}`)} alt="coffee1"/> 
+  </div>
 
       
-    <div>
+<div className="price-container">
       <button className='continue-button' onClick={() => {closeModal(false);
         }}>Contiune Shopping </button>
       <button className='view-button'> View/Edit Cart </button>
+      <p>Your Cart Contains 1 items</p>
       <p>Subtotal</p>
       <h2>$14.95</h2>
-      <p>Your Cart Contains 1 items</p>
+      
       <button className='checkout-button'>Proceed To Checkout</button>
 
       </div>
       </div>
-    </div>
+</div>
     </div>
   );
 }
 
 export default Modal
+
 
