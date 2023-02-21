@@ -25,15 +25,39 @@
 }
 
 .price-container {
-  display: table-caption;
-  display: flex;
-  caption-side: block-end;
-  flex-direction: column;
-  flex-wrap: wrap;
-  align-content: flex-end;
-  margin-top: -277px;
-  padding: 19px;
+ display: table-caption;
+    display: flex;
+    caption-side: block-end;
+    align-content: flex-end;
+    align-items: center;
+    flex-direction: row;
+    padding: 14px;
 }
+
+.Cart-Contains-Text {
+  padding: 1px;
+  font-size: 13px;
+}
+
+.Subtotal-text {
+  padding: 6px;
+  font-size: 13px;
+}
+
+
+
+.price-container2 {
+margin-left: 146px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 18px;
+    background: #D6D5DE;
+    padding: 7px;
+    align-content: center;
+    align-items: center;
+    margin-top: 11px;
+}
+
 
 .coffee-name {
   font-family: 'Raleway', sans-serif;
@@ -59,6 +83,7 @@
   padding: 1px;
   max-width: 307px;
   display: flex; 
+  margin-left: 80px;
 }
 
 .continue-button {
@@ -104,4 +129,16 @@
   cursor: pointer;
   width: 212px;
   border-radius: 43px;
+}
+
+/* Media query for mobile devices */
+@media screen and (max-width: 1040px) {
+
+  body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+
 }

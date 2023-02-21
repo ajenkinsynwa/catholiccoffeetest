@@ -21,21 +21,21 @@ function Modal({closeModal, coffee}) {
       <br></br>
       <p2>Grind: Whole Bean</p2>
     </div>
-     <div>
-    <img className='coffee-modal-image' src={require(`../assets/${coffee.imagePath}`)} alt="coffee1"/> 
-  </div>
-
+  
       
 <div className="price-container">
+
+    <img className='coffee-modal-image' src={require(`../assets/${coffee.imagePath}`)} alt="coffee1"/> 
+<div className="price-container2">
       <button className='continue-button' onClick={() => {closeModal(false);
         }}>Contiune Shopping </button>
       <button className='view-button'> View/Edit Cart </button>
-      <p>Your Cart Contains 1 items</p>
-      <p>Subtotal</p>
-      <h2>$14.95</h2>
+      <p2 className='Subtotal-text'>Subtotal</p2>
+      <h1>$14.95</h1>
+      <p className='Cart-Contains-Text'>Your Cart Contains 1 items</p>
       
       <button className='checkout-button'>Proceed To Checkout</button>
-
+</div>
       </div>
       </div>
 </div>
