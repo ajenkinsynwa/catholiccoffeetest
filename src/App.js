@@ -32,6 +32,7 @@ const Navbar = () => {
 //-->This is the functional component in React first: This portion of the code creates a menu toggle button with a hamburger icon. When the button is clicked, the handleClick function is called which toggles the click state using setClick(!click).
 
 return (
+  <body>
   <div className={color ? "header scrolled" : "header"}>
       <div className="banner1">
     <div>
@@ -49,7 +50,7 @@ return (
                 {click ? (
                   <FaTimes size={20} style={{ color: "#E9DDC7" }} />
                 ) : (
-                  <FaBars size={20} style={{ color: "#E9DDC7" }} />
+                  <FaBars size={20} style={{ color: "#ebc98a" }} />
                 )}
             </div>
          
@@ -87,31 +88,31 @@ return (
       </div>
       
       
-      <nav className={click ? "mobile-nav active" : "mobile-nav"}>
-        <div>
-          <ul>
+      <nav  className= {click ? "mobile-nav active" : "mobile-nav"}>
+        <div className='nav-m'>
+          <ul className='nav-m'>
             <li>
-              <a href="/" onClick={handleClick}>
+              <a className="nav-m"  href="/" onClick={handleClick}>
                 OUR COFFEES
               </a>
             </li>
             <li>
-              <a href="/" onClick={handleClick}>
+              <a className="nav-m"  href="/" onClick={handleClick}>
                 GIFT SETS
               </a>
             </li>
             <li>
-              <a href="/" onClick={handleClick}>
+              <a className="nav-m"  href="/" onClick={handleClick}>
                 MERCHANDISE
               </a>
             </li>
             <li>
-              <a href="/" onClick={handleClick}>
+              <a className="nav-m"  href="/" onClick={handleClick}>
                 THE SAINTS
               </a>
             </li>
             <li>
-              <a href="/" onClick={handleClick}>
+              <a className="nav-m"  href="/" onClick={handleClick}>
                 SUBSCRIPTIONS
               </a>
             </li>
@@ -186,7 +187,7 @@ return (
    </div>
 
   <div>
-        <div className="">
+        <div className="newsletter container">
           <h1 className="newsletter-text"> JOIN OUR NEWSLETTER </h1>
           <p1 className="newsletter-text2">Get Exclusive offers and stay up to day on new roasts and products.</p1>
         </div>
@@ -203,7 +204,7 @@ return (
     </div>    
 </footer>  
 </div>
- 
+</body>
 
   );
 };
